@@ -1,5 +1,6 @@
 # PrimesTable
 Task---------------------------------------------------------------------------------------------------
+
 Write a program that prints out a multiplication table of the first 10 prime
 numbers.
 The program must run from the command line and print one table to
@@ -16,7 +17,9 @@ When you’re done
 Put your code on GitHub or email us a zip/tarball.
 
 Decision---------------------------------------------------------------------------------------------------
+
 This is my result table with first 10 prime numbers, multiplied in cells. First row and column are given array of prime numbers, cells are the corresponding multiplication
+
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
 |     | 2   | 3   | 5   | 7   | 11  | 13  | 17  | 19  | 23  | 29  |
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
