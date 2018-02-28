@@ -5,7 +5,7 @@ ini_set("memory_limit",-1);
 	include 'PrimeNumber.php';
 
 //initialize class with $limit, $countPrime. $limit is used in simle Eratosthenes Sieve, Atkin method; 30 limit gives 10 primes
-	$prime = new PrimeNumber(1000000, 1000000); 
+	$prime = new PrimeNumber(1000, 1000); 
 	if($prime->result===false){ 
 		echo 'Cant initialize prime class. Parameters limit/countPrime are wrong.';
 		exit;
@@ -15,14 +15,14 @@ ini_set("memory_limit",-1);
 	$prNumber = 11;
 
 //--check for prime with simple method	
-/*
+/**/	
 	if ($prime->isSimplePrime($prNumber)) 
 		echo $prNumber.' is prime.'."\n\r";
 	else
 		echo $prNumber.' is not prime.'."\n\r";	
-*/	
+
 //--return first N primes, using Simple method
-/*	
+/**/	
 $time_start = microtime(true);
 	$primeNumbers = $prime->countSimplePrime();
 	if($prime->result===false) echo 'No prime numbers generated.';
@@ -32,10 +32,10 @@ $time_start = microtime(true);
 	}
 $time_end = microtime(true);
 echo ($time_end - $time_start).' s'."\r\n";
-*/
+
 //--check Atkin method with given limit; it NOT implemented with given count of prime numbers
 // limit=1000000 time=1.4188888072968 s
-/*	
+/**/	
 $time_start = microtime(true);
 	$primeNumbers = $prime->getAtkinSievePrimes();
 	if($prime->result===false) echo 'No prime numbers generated.';
@@ -45,9 +45,9 @@ $time_start = microtime(true);
 	}
 $time_end = microtime(true);
 echo ($time_end - $time_start).' s'."\r\n";
-*/
+
 //--check simple Eratosthenes Sieve method with given limit; it implemented with given count of prime numbers by segmentEratosthenesSieve(...) 
-/*
+/**/
 $time_start = microtime(true);
 	 //10 primes   $limit=1490000; //113458 primes
 	$primeNumbers = $prime->getEratosthenesSievePrimes();
@@ -58,7 +58,7 @@ $time_start = microtime(true);
 	}
 $time_end = microtime(true);
 echo ($time_end - $time_start).' s'."\r\n";
-*/
+
 //--return first N primes, using Segment Eratosthenes Sieve and Eratosthenes Sieve methods
 /* */
 $time_start = microtime(true);
